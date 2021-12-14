@@ -1,0 +1,25 @@
+{%extends 'organ/base.html'%}
+
+{%block title%}
+    <title>Story</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            text-decoration: wavy;
+        }
+    </style>
+{%endblock%}
+
+{%block content%}
+    <h1>Stories You Should Read</h1>
+    <div>
+        {%for o in oStory%}
+            <h1>{{o.title}}</h1>
+            <date>{{o.created_date}}</date>
+            <p>{{o.story}}</p>
+            <h6>By:{{o.social_handle}}</h6>
+        {%endfor%}
+    </div>
+{%endblock%}

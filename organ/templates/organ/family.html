@@ -1,0 +1,72 @@
+{%extends 'organ/base.html'%}
+
+{%block title%}
+    <title>Family</title>
+{%endblock%}
+
+{%block content%}
+    {% include 'organ/status.html' %}
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h5>Organ Donors:</h5>
+            <hr>
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Social Handle</th>
+                        <th>State</th>
+                        <th>city</th>
+                        <th>area</th>
+                        <th>age</th>
+                    </tr>
+
+                    {%for donor in oDonors%}
+                        <tr>
+                            <th><a class="btn btn-sm btn-info" href="{% url 'donor' donor.id %}">view</th>
+                            <td>{{donor.name}}</td>
+                            <td>{{donor.social_handle}}</td>
+                            <td>{{donor.state}}</td>
+                            <td>{{donor.city}}</td>
+                            <td>{{donor.area}}</td>
+                            <td>{{donor.age}}</td>
+                        </tr>
+                    {%endfor%}
+    
+                </table>
+            </div>
+        </div>
+    
+        <div class="col-md-6">
+            <h5>Blood Donors</h5>
+            <hr>
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Social Handle</th>
+                        <th>State</th>
+                        <th>city</th>
+                        <th>area</th>
+                        <th>age</th>
+                    </tr>
+                    {%for donor in bDonors%}
+                        <tr>
+                            <th></th>
+                            <td>{{donor.name}}</td>
+                            <td>{{donor.social_handle}}</td>
+                            <td>{{donor.state}}</td>
+                            <td>{{donor.city}}</td>
+                            <td>{{donor.area}}</td>
+                            <td>{{donor.age}}</td>
+                        </tr>
+                    {%endfor%}
+                </table>
+            </div>
+        </div>
+    
+    </div>
+{%endblock%}

@@ -1,0 +1,21 @@
+{%load static%}
+
+<style>
+  
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home'%}"><img src="{%static 'images/favicon.png'%}" id="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{% url 'read'%}">Read</a>
+        <a class="nav-item nav-link " href="{% url 'family'%}">Statastics</a>
+        <a class="nav-item nav-link " href="{% url 'stories'%}">Stories</a>
+        <a class="nav-item nav-link " href="{% url 'terms'%}">Terms & Condition</a>
+        <a class="nav-item nav-link" href="{% url 'about'%}">About us</a>
+      </div>
+    </div>
+  </nav>
